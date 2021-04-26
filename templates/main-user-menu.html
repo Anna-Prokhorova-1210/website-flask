@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main>
+    {% if current_user.is_authenticated %}
+            <div class="main-menu-panel">
+                <a href="/get-books">Взять учебники</a>
+                <a href="/return-books">Сдать учебники</a>
+                {% if current_user.is_teacher %}
+                <a href="/check-statistics/1">Посмотреть статистику учеников</a>
+                {% endif %}
+            </div>
+            <div class="login-readress">
+                <a href="/personal-account">Личный кабинет</a>
+            </div>
+    {% else %}
+         <div class="login-readress small-bot-margin">
+                    <div>Уже есть аккаунт?</div>
+                    <a href="student-login">Войти</a>
+                </div>
+    {% endif %}
+        </main>
+{% endblock %}

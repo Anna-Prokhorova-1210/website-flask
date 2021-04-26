@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <main>
+            <div class="register-form small-bot-margin">
+                <form class="login-container" method="post">
+                    {{ form.hidden_tag() }}
+                    <div>Регистрация</div>
+                    <p class="no-margin">
+                        {{ form.name.label }}<br>
+                        {{ form.name(class="form-control") }}<br>
+                        {% for error in form.name.errors %}
+                            <p class="alert alert-danger" role="alert">
+                                {{ error }}
+                            </p>
+                        {% endfor %}
+                    </p>
+                    <p class="no-margin">
+                        {{ form.surname.label }}<br>
+                        {{ form.surname(class="form-control") }}<br>
+                        {% for error in form.surname.errors %}
+                            <p class="alert alert-danger" role="alert">
+                                {{ error }}
+                            </p>
+                        {% endfor %}
+                    </p>
+                    <p class="no-margin">
+                        {{ form.letter.label }}<br>
+                        {{ form.letter(class="form-control") }}<br>
+                        {% for error in form.letter.errors %}
+                            <p class="alert alert-danger" role="alert">
+                                {{ error }}
+                            </p>
+                        {% endfor %}
+                    </p>
+                    <p class="no-margin">
+                        {{ form.email.label }}<br>
+                        {{ form.email(class="form-control", type="email") }}<br>
+                        {% for error in form.email.errors %}
+                            <p class="alert alert-danger" role="alert">
+                                {{ error }}
+                            </p>
+                        {% endfor %}
+                    </p>
+                    <p class="no-margin">
+                        {{ form.password.label }}<br>
+                        {{ form.password(class="form-control", type="password") }}<br>
+                        {% for error in form.password.errors %}
+                            <p class="alert alert-danger" role="alert">
+                                {{ error }}
+                            </p>
+                        {% endfor %}
+                    </p>
+                    <p class="no-margin">
+                        {{ form.password_again.label }}<br>
+                        {{ form.password_again(class="form-control", type="password") }}<br>
+                        {% for error in form.password_again.errors %}
+                            <p class="alert alert-danger" role="alert">
+                                {{ error }}
+                            </p>
+                        {% endfor %}
+                    </p>
+                    <p class="no-margin">{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+                        {{message}}
+                </form>
+            </div>
+            <div class="login-readress small-bot-margin">
+                    <div>Уже есть аккаунт?</div>
+                    <a href="student-login">Войти</a>
+                </div>
+        </main>
+{% endblock %}

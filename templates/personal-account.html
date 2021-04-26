@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main>
+    {% if current_user.is_authenticated %}
+            <div class="nav-menu-panel">
+                <div>Имя:  {{ user.name }}</div>
+                <div>Фамилия:  {{ user.surname }}</div>
+                <div>Класс:  {{ user.letter }}</div>
+                <div>Учебники на руках:</div>
+                <ul class="book-ul">
+                    {% for book in user.books %}
+                    <li>{{ book.title }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+    <div class="login-readress">
+                <a href="/main-user-menu">Действия с учебниками</a>
+            </div>
+        {% else %}
+         <div class="login-readress small-bot-margin">
+                    <div>Уже есть аккаунт?</div>
+                    <a href="student-login">Войти</a>
+                </div>
+    {% endif %}
+        </main>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main>
+{% if current_user.is_authenticated and current_user.is_teacher %}
+{% if class_id < 100 %}
+<div class="nav-menu-panel">
+                <a href="/check-statistics/100">10 A</a>
+                <a href="/check-statistics/101">10 Б</a>
+                <a href="/check-statistics/102">10 В</a>
+                <a href="/check-statistics/103">10 Г</a>
+            </div>
+{% else %}
+    <div class="nav-menu-panel">
+    {% for student in students %}
+        <div class="stat-row">
+                    <div>{{ student.name }} {{ student.surname }}</div>
+                    <div>Учебники на руках:</div>
+                    <ul class="book-ul">
+                        {% for book in student.books %}
+                        <li>{{ book.title }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+    {% endfor %}
+    </div>
+{% endif %}
+{% else %}
+    <div class="login-readress small-bot-margin">
+                    <div>Вы - учитель?</div>
+                    <a href="http://127.0.0.1:8080/student-login">Войти</a>
+                </div>
+{% endif %}
+</main>
+{% endblock %}

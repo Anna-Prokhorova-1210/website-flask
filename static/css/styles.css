@@ -1,0 +1,142 @@
+*,
+*: before,
+*: after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background-color: darkgray;
+    width: 100%;
+    height: 150px;
+    border-radius: 0px 0px 20px 20px;
+    #border-style: ridge;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    padding-top: 75px;
+}
+
+main {
+    width: 100%;
+    height: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 100px;
+    align-items: center;
+}
+
+.register-form {
+    width: 40%;
+    height: 300px;
+    background-color: darkgray;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 20px 20px 20px 20px;
+}
+
+.small-bot-margin {
+    margin-bottom: 30px;
+}
+
+footer {
+    background-color: darkgray;
+    width: 100%;
+    height: 150px;
+    border-radius: 20px 20px 0px 0px;
+    #border-style: ridge;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.header-logo {
+    font-family: 'Kiwi Maru', serif;
+    font-size: 50px;
+    margin-left: 100px;
+}
+
+.login-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.no-margin {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.login-readress {
+    width: 20%;
+    height: 50px;
+    background-color: darkgray;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 20px 20px 20px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main-menu-panel {
+    width: 50%;
+    height: 300px;
+    background-color: darkgray;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 20px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 200px;
+}
+
+.nav-menu-panel {
+    width: 50%;
+    height: 300px;
+    background-color: darkgray;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 20px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    justify-content: space-around;
+    margin-bottom: 200px;
+}
+
+.book-ul {
+    margin: 0;
+}
+
+.stat-menu-panel {
+    width: 50%;
+    height: auto;
+    background-color: darkgray;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 20px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    justify-content: space-around;
+    margin-bottom: 200px;
+    padding-top: 10px;
+}
+
+.stat-row {
+    margin-bottom: 10px;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+a::after {
+    background-color: aqua;
+}

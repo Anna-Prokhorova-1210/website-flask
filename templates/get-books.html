@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main>
+{% if current_user.is_authenticated %}
+<h1>Взятие книг</h1>
+<form action="" method="post" enctype="multipart/form-data">
+    {% for item in books %}
+        <p><input type="checkbox" name={{ item.title }} value={{ item.id }}>{{ item.title }}</p>
+    {% endfor %}
+    <p><button type="submit">Взять учебники</button></p>
+</form>
+{% else %}
+         <div class="login-readress small-bot-margin">
+                    <div>Уже есть аккаунт?</div>
+                    <a href="student-login">Войти</a>
+                </div>
+    {% endif %}
+</main>
+{% endblock %}
